@@ -43,13 +43,19 @@ function addBook() {
   const author = document.getElementById("author").value;
   const year = document.getElementById("year").value;
   const isCompleted = document.getElementById("is-completed").checked;
+  const yearAsNumber = parseInt(year, 10);
+
+  if (isNaN(yearAsNumber)) {
+    alert("Please enter a valid year as a number.");
+    return;
+  }
 
   const generatedID = generateId();
   const bookObject = generateBookObject(
     generatedID,
     title,
     author,
-    year,
+    yearAsNumber,
     isCompleted
   );
   books.push(bookObject);
@@ -72,13 +78,12 @@ function generateBookObject(id, title, author, year, isCompleted) {
   };
 }
 
-//confirm delete
+
 deleteButton.addEventListener("click", () => {
   modal.style.transition = "1s";
   modal.classList.remove("modal-open");
 });
 
-// cancel delete
 closeModal.addEventListener("click", () => {
   modal.style.transition = "1s";
   modal.classList.remove("modal-open");

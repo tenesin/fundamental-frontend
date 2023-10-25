@@ -15,37 +15,44 @@ body {
   margin: 50px auto;
   padding: 20px;
   color: #f2e5d0;
+  align-items: center;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 40% 70%;
-}
-
-.grid-item-left {
-  margin: auto;
+.content-title {
+  text-align: center;
 }
 
 .page-header {
   font-size: 50px;
 }
 .page-header-secondary {
-  font-size: 20px;
+  font-size: 30px;
 }
+
 
 form {
   padding: 20px;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}
+
+.form h1 {
+  text-align: center;
 }
 
 .form-group {
   margin: 20px;
+  align-items: center;
+  justify-content: center;
+  display: grid;
 }
 
 .form-label {
   margin-left: 10px;
   margin-bottom: 10px;
   font-family: "Playfair Display", serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .form-input {
@@ -56,12 +63,12 @@ form {
 }
 
 .button-submit {
-  margin-left: 20px;
-  border: none;
   border-radius: 30px;
-  width: 40%;
   padding: 10px;
   background-color: #f2e5d0;
+  justify-content: center;
+  align-items: center;
+  min-width: auto;
 }
 
 .button-submit:hover {
@@ -72,12 +79,11 @@ form {
 .book-container {
   width: 70%;
   margin: 50px auto;
-  /* padding: 20px; */
-  /* background-color: #f9f3ee; */
-  display: grid;
-  grid-template-columns: 50% 50%;
-  /* display: flex;
-  justify-content: space-between; */
+  display: column;
+}
+
+.book-container h1 {
+  text-align: center;
 }
 
 #books div,
@@ -110,7 +116,6 @@ form {
 .check-button {
   width: 40px;
   height: 40px;
-
   background: url("../assets/check-outline.svg");
   background-size: contain;
   margin-left: auto;
